@@ -8,10 +8,17 @@ const config: Config = {
   ],
   theme: {
     extend: {
-      backgroundImage: {
-        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-conic":
-          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+      colors: {
+        pink: {
+          primary: "#CEA39D",
+          secondary: "#F7CDD0",
+          tertiary: "#FDEEE8",
+        },
+        green: "#C2C884",
+        cream: "#FEF5EB",
+      },
+      fontFamily: {
+        "marxiana-antiqua": ["TT Marxiana Antiqua", "serif"],
       },
     },
   },
