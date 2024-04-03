@@ -16,6 +16,10 @@ const config: Config = {
         },
         green: "#C2C884",
         cream: "#FEF5EB",
+        brown: {
+          primary: "#794F42",
+          secondary: "#996B5A",
+        },
       },
       fontFamily: {
         marxiana: ["TT Marxiana Antiqua", "sans-serif"],
