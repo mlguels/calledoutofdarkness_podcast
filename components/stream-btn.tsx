@@ -4,7 +4,7 @@ export default function StreamButton() {
   return (
     <Link
       href="/"
-      className="w-full uppercase bg-green px-6 py-4 rounded-2xl border-black border-[1px]"
+      className="uppercase bg-green px-8 py-4 rounded-2xl border-black border-[1px] whitespace-nowrap"
     >
       Stream the latest episode here
     </Link>
