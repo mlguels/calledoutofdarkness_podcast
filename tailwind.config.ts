@@ -18,7 +18,7 @@ const config: Config = {
         cream: "#FEF5EB",
       },
       fontFamily: {
-        "marxiana-antiqua": ["TT Marxiana Antiqua", "serif"],
+        marxiana: ["TT Marxiana Antiqua", "sans-serif"],
       },
     },
   },
