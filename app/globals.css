@@ -2,4 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-/* @import url("/public/fonts/TT\ Marxiana\ Trial\ Antiqua.ttf"); */
+.heading-2 {
+  @apply text-8xl font-marxiana text-brown-primary tracking-tighter;
+}
