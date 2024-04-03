@@ -2,6 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-.heading-2 {
+/* .heading-2 {
   @apply text-8xl font-marxiana text-brown-primary tracking-tighter;
-}
+} */

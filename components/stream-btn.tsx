@@ -2,11 +2,10 @@ import Link from "next/link";
 
 export default function StreamButton() {
   return (
-    <Link
-      href="/"
-      className="uppercase bg-green px-8 py-4 rounded-2xl border-black border-[1px] whitespace-nowrap"
-    >
-      Stream the latest episode here
+    <Link href="/">
+      <button className="uppercase bg-green text-[10px] md:text-lg px-auto md:px-8 py-3 md:py-4 rounded-lg md:rounded-2xl border-black border-[1px] whitespace-nowrap w-full">
+        Stream the latest episode here
+      </button>
     </Link>
   );
 }
