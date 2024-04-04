@@ -13,7 +13,7 @@ const pinyonScript = Pinyon_Script({
 
 export default function HeroSection() {
   return (
-    <main className="flex flex-col md:flex-row justify-center gap-y-10 md:gap-[300px] w-full h-auto items-center pt-10 pb-20">
+    <main className="flex flex-col md:flex-row justify-center gap-y-10 md:gap-[300px] w-full h-auto items-center pt-10 pb-20 bg-pink-primary">
       <section className="flex flex-col">
         <HeroHeading text="Called" />
         <HeroHeading text="Out of" />

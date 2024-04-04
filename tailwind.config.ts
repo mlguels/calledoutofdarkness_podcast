@@ -20,12 +20,17 @@ const config: Config = {
           primary: "#794F42",
           secondary: "#996B5A",
         },
+        blue: {
+          primary: "#E2EFFA",
+          secondary: "#93B0E1",
+        },
       },
-      fontFamily: {
-        marxiana: ["TT Marxiana Antiqua", "sans-serif"],
-      },
+    },
+    fontFamily: {
+      marxiana: ["TT Marxiana Antiqua", "sans-serif"],
     },
   },
   plugins: [],
 };
+
 export default config;
