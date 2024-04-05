@@ -1,0 +1,34 @@
+export const guests = [
+  {
+    id: 1,
+    name: "Miguel Rodriguez",
+    desc: "Man of God",
+    date: 1,
+    subject: "Fear of the Lord",
+    img: "/images/placeholder-headshot.png",
+  },
+  {
+    id: 2,
+    name: "Mandie Mass",
+    desc: "Brave Girls Gather Host",
+    date: 2,
+    subject: "Seeking God",
+    img: "/images/placeholder-headshot.png",
+  },
+  {
+    id: 1,
+    name: "Jasmine",
+    desc: "Women of God",
+    date: 1,
+    subject: "Called out of Darkness",
+    img: "/images/placeholder-headshot.png",
+  },
+  {
+    id: 1,
+    name: "Isi",
+    desc: "Women of God",
+    date: 4,
+    subject: "Wisdom",
+    img: "/images/placeholder-headshot.png",
+  },
+];
