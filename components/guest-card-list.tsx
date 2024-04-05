@@ -1,4 +1,4 @@
-import { guests } from "@/constant/data";
+import { guests } from "@/constant/constants";
 
 import GuestCard from "./guest-card";
 

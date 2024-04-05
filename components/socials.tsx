@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 
-import { socialLinks } from "@/constant/data";
+import { socialLinks } from "@/constant/constants";
 import { lora } from "@/app/layout";
 
 export default function Socials() {
