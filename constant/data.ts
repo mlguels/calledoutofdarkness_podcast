@@ -32,3 +32,22 @@ export const guests = [
     img: "/images/placeholder-headshot.png",
   },
 ];
+
+export const socialLinks = [
+  {
+    link: "https://www.instagram.com/",
+    icon: "/images/instagram.png",
+  },
+  {
+    link: "https://www.youtube.com/",
+    icon: "/images/youtube.png",
+  },
+  {
+    link: "https://www.tiktok.com/",
+    icon: "/images/tiktok.png",
+  },
+  {
+    link: "https://www.email.com/",
+    icon: "/images/email.png",
+  },
+];
