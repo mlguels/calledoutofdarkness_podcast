@@ -15,7 +15,7 @@ const config: Config = {
           tertiary: "#FDEEE8",
           quatro: "#9E6781",
         },
-        green: "#C2C884",
+        green: { primary: "#C2C884", secondary: "#879B78" },
         cream: "#FEF5EB",
         brown: {
           primary: "#794F42",
