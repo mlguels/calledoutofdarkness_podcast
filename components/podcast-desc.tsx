@@ -17,7 +17,7 @@ export default function PodcastDesc() {
           <IntroPodcast />
           <Link href="/" className="self-end">
             <button
-              className={`${lora.className} bg-blue-secondary px-10 py-3 rounded-2xl border-[1.5px] border-black uppercase`}
+              className={`${lora.className} bg-blue-secondary px-10 py-3 rounded-2xl border-[1.5px] border-black uppercase state-effect`}
             >
               Listen now
             </button>

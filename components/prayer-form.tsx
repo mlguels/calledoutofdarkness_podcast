@@ -49,19 +49,19 @@ export default function PrayerForm() {
     >
       <h1 className={`text-3xl`}>Prayer Request:</h1>
       <input
-        className="border-[1.5px] border-black rounded-lg p-1 w-full"
+        className="border-[1.5px] border-black rounded-lg p-1 w-full active:outline-blue-secondary focus:outline-blue-secondary"
         placeholder="Name"
         type="name"
         name="name"
       />
       <input
-        className="border-[1.5px] border-black rounded-lg p-1 w-full"
+        className="border-[1.5px] border-black rounded-lg p-1 w-full active:outline-blue-secondary focus:outline-blue-secondary"
         placeholder="Email"
         type="Email"
         name="email"
       />
       <textarea
-        className="border-[1.5px] border-black rounded-lg p-1"
+        className="border-[1.5px] border-black rounded-lg p-1 active:outline-blue-secondary focus:outline-blue-secondary"
         placeholder="Prayer request"
         rows={10}
         cols={30}
