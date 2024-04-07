@@ -1,54 +1,73 @@
-import { lora } from "@/app/layout";
-import { PrismaClient } from "@prisma/client";
+"use client";
 
-const prisma = new PrismaClient();
+import toast from "react-hot-toast";
 
-export default async function PrayerForm() {
-  const addPrayerRequest = async (formData: FormData) => {
-    "use server";
+import { addPrayerRequest } from "@/actions/actions";
+import PrayerSubmitButton from "./prayer-submit-btn";
+import { PrayerSchema } from "@/lib/zod-types";
+import { useRef } from "react";
 
-    await prisma.prayerRequest.create({
-      data: {
-        name: formData.get("name"),
-        email: formData.get("email"),
-        prayer: formData.get("prayer"),
-      },
-    });
+export default function PrayerForm() {
+  const ref = useRef<HTMLFormElement>(null);
+  const clientAction = async (formData: FormData) => {
+    const newPrayerRequest = {
+      name: formData.get("name")?.toString() ?? "",
+      email: formData.get("email")?.toString() ?? "",
+      prayer: formData.get("prayer")?.toString() ?? "",
+    };
+
+    // client site validation
+    const result = PrayerSchema.safeParse(newPrayerRequest);
+    if (!result.success) {
+      let errorMessage = "";
+
+      result.error.issues.forEach((issue) => {
+        console.log(issue);
+        errorMessage =
+          errorMessage + issue.path[0] + ": " + issue.message + ". ";
+      });
+
+      toast.error(errorMessage);
+      return;
+    }
+
+    const response = await addPrayerRequest(result.data);
+    if (response?.error) {
+      toast.error(response.error);
+      return;
+    }
+
+    ref.current?.reset();
+    toast.success("Prayer request submitted!");
   };
 
   return (
     <form
-      action={addPrayerRequest}
+      ref={ref}
+      action={clientAction}
       className="flex flex-col gap-4 w-fit justify-center items-center"
     >
-      <h1 className={`${lora.className} text-3xl`}>Prayer Request:</h1>
+      <h1 className={`text-3xl`}>Prayer Request:</h1>
       <input
         className="border-[1.5px] border-black rounded-lg p-1 w-full"
         placeholder="Name"
         type="name"
         name="name"
-        required
       />
       <input
         className="border-[1.5px] border-black rounded-lg p-1 w-full"
         placeholder="Email"
         type="Email"
         name="email"
-        required
       />
       <textarea
         className="border-[1.5px] border-black rounded-lg p-1"
         placeholder="Prayer request"
-        rows={5}
+        rows={10}
         cols={30}
         name="prayer"
-        required
       />
-      <button
-        className={`${lora.className} bg-cream py-2 px-10 border-[1.5px] border-black rounded-lg uppercase w-full`}
-      >
-        Submit
-      </button>
+      <PrayerSubmitButton />
     </form>
   );
 }
