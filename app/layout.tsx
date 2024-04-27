@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
 import { Inter, Lora } from "next/font/google";
-import "./globals.css";
-import Footer from "@/components/footer";
+
 import { Toaster } from "react-hot-toast";
+
+import "./globals.css";
 
 export const inter = Inter({ subsets: ["latin"] });
 export const lora = Lora({ subsets: ["latin"] });
@@ -22,7 +23,6 @@ export default function RootLayout({
       <body className={`${inter.className}`}>
         {children}
         <Toaster position="top-right" />
-        <Footer />
       </body>
     </html>
   );
