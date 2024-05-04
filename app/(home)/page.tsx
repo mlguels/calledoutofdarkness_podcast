@@ -12,8 +12,8 @@ export default function Home() {
       <HeroSection />
       <PodcastDesc />
       <AboutMe />
-      <MonthlyGuests />
-      <GuestSpeaker />
+      {/* <MonthlyGuests /> */}
+      {/* <GuestSpeaker /> */}
       <ContactPage />
       <Footer />
     </main>
