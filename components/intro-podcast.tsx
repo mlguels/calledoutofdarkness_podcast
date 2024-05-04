@@ -6,7 +6,7 @@ const pinyonScript = Pinyon_Script({
   weight: "400",
 });
 
-export default function IntoPodcast() {
+export default function IntroPodcast() {
   return (
     <section className="flex flex-col border-2 gap-3 border-black p-10">
       <h2 className={`${pinyonScript.className} text-3xl tracking-widest`}>
@@ -15,7 +15,10 @@ export default function IntoPodcast() {
       <h1 className={`${lora.className} font-semibold`}>
         Introdution to Called Out of Darkness
       </h1>
-      <p className={`${lora.className} max-w-[500px]`}>
+
+      <p
+        className={`${lora.className} md:max-w-[450px] md:max-h-[500px] overflow-hidden text-justify`}
+      >
         Join me as we dive deep into Scripture, seeking wisdom and understanding
         to navigate the challenges of life. Together, we&apos;ll discover how to
         shine brightly, not conforming to the ways of this world but radiating

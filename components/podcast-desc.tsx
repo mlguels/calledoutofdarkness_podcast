@@ -5,15 +5,16 @@ import { lora } from "@/app/layout";
 
 export default function PodcastDesc() {
   return (
-    <main className="bg-cream h-full pt-10 pb-10">
-      <section className="flex flex-col md:flex-row justify-center items-center gap-10 md:gap-32 p-10">
+    <main className="bg-cream h-fit pt-10 pb-10">
+      <section className="flex flex-col md:flex-row justify-center items-center gap-10 p-10">
         <Image
           src="/images/lightbulb.jpg"
           width={500}
           height={500}
           alt="Picture of the author"
+          className="rounded-2xl"
         />
-        <div className="px-5 flex flex-col gap-5">
+        <div className="px-5 flex flex-col gap-5 h-fit justify-center items-center">
           <IntroPodcast />
           <Link href="/" className="self-end">
             <button
