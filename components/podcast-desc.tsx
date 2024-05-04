@@ -16,7 +16,11 @@ export default function PodcastDesc() {
         />
         <div className="px-5 flex flex-col gap-5 h-fit justify-center items-center">
           <IntroPodcast />
-          <Link href="/" className="self-end">
+          <Link
+            href="https://podcasters.spotify.com/pod/show/calledoutofdarkness"
+            target="_blank"
+            className="self-end"
+          >
             <button
               className={`${lora.className} bg-blue-secondary px-10 py-3 rounded-2xl border-[1.5px] border-black uppercase state-effect`}
             >

@@ -11,7 +11,7 @@ export default function Socials() {
       <ul className="flex gap-2">
         {socialLinks.map((social, i) => (
           <li key={i}>
-            <Link href={social.link}>
+            <Link href={social.link} target="_blank">
               <Image
                 src={social.icon}
                 alt="social icon"
