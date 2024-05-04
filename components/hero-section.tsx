@@ -20,7 +20,7 @@ export default function HeroSection() {
         <HeroHeading text="Darkness" />
         <div className="flex flex-col">
           <h2
-            className={`${lora.className} text-4xl md:text-7xl  text-cream self-end`}
+            className={`${lora.className} text-5xl md:text-7xl  text-cream self-end`}
           >
             Summer
           </h2>
@@ -30,7 +30,7 @@ export default function HeroSection() {
           >
             with
             <span
-              className={`${lora.className} text-4xl md:text-7xl text-cream self-end`}
+              className={`${lora.className} text-5xl md:text-7xl text-cream self-end`}
             >
               {" "}
               Sollis
@@ -45,9 +45,9 @@ export default function HeroSection() {
         <Image
           src="/images/summer.png"
           alt="Picture of the author"
-          width={400}
-          height={400}
-          className="rounded-2xl w-auto h-auto"
+          width={300}
+          height={300}
+          className="rounded-2xl min-w-[300px] min-h-[300px] md:w-[500px] md:h-[500px]"
           quality={100}
         />
       </div>

@@ -17,7 +17,7 @@ export default function IntroPodcast() {
       </h1>
 
       <p
-        className={`${lora.className} md:max-w-[450px] md:max-h-[500px] overflow-hidden text-justify`}
+        className={`${lora.className} min-w-[300px] md:max-w-[400px] md:max-h-[400px] overflow-hidden`}
       >
         Join me as we dive deep into Scripture, seeking wisdom and understanding
         to navigate the challenges of life. Together, we&apos;ll discover how to
