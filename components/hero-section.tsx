@@ -41,15 +41,16 @@ export default function HeroSection() {
           </div>
         </div>
       </section>
-
-      <Image
-        src="/images/summer.png"
-        alt="Picture of the author"
-        width={500}
-        height={500}
-        className="rounded-2xl w-auto h-auto md:h-[500px] md:w-[500px]"
-        quality={100}
-      />
+      <div>
+        <Image
+          src="/images/summer.png"
+          alt="Picture of the author"
+          width={400}
+          height={400}
+          className="rounded-2xl w-auto h-auto"
+          quality={100}
+        />
+      </div>
     </main>
   );
 }
