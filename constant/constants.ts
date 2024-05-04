@@ -35,19 +35,23 @@ export const guests = [
 
 export const socialLinks = [
   {
-    link: "https://www.instagram.com/",
+    link: "https://www.instagram.com/calledoutofdarknesspodcast/?igsh=MTJ1ZTQ0ajVsenVyaQ%3D%3D&utm_source=qr",
     icon: "/images/instagram.png",
   },
   {
-    link: "https://www.youtube.com/",
+    link: "https://www.youtube.com/@COODpodcast",
     icon: "/images/youtube.png",
   },
   {
-    link: "https://www.tiktok.com/",
+    link: "https://www.tiktok.com/@summersollis?is_from_webapp=1&sender_device=pc",
     icon: "/images/tiktok.png",
   },
+  // {
+  //   link: "https://www.email.com/",
+  //   icon: "/images/email.png",
+  // },
   {
-    link: "https://www.email.com/",
-    icon: "/images/email.png",
+    link: "https://podcasters.spotify.com/pod/show/calledoutofdarkness",
+    icon: "/images/spotify.png",
   },
 ];
