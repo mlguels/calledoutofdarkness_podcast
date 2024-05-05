@@ -9,10 +9,10 @@ export default function PodcastDesc() {
     <main className="bg-cream h-fit pt-10 pb-10">
       <section className="flex flex-col md:flex-row justify-center items-center gap-10 p-10">
         <Image
-          src="/images/lightbulb.jpg"
+          src="/images/lightbulb.JPG"
           width={500}
           height={500}
-          alt="Picture of the author"
+          alt="Lightbulb image"
           className="rounded-2xl"
         />
         <div className="px-5 flex flex-col gap-5 h-fit justify-center items-center">
