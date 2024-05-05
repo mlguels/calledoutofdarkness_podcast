@@ -1,10 +1,10 @@
 import Image from "next/image";
 
-import { lora } from "@/app/layout";
 import { Pinyon_Script } from "next/font/google";
 
 import StreamButton from "./stream-btn";
 import HeroHeading from "./hero-heading";
+import { lora } from "@/constant/constants";
 
 const pinyonScript = Pinyon_Script({
   subsets: ["latin"],

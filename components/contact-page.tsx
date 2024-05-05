@@ -1,6 +1,6 @@
-import { lora } from "@/app/layout";
 import Socials from "./socials";
 import PrayerForm from "./prayer-form";
+import { lora } from "@/constant/constants";
 
 export default function ContactPage() {
   return (

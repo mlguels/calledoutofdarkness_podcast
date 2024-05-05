@@ -1,5 +1,5 @@
-import { lora } from "@/app/layout";
 import Image from "next/image";
+import { lora } from "@/constant/constants";
 
 export default function AboutMe() {
   return (

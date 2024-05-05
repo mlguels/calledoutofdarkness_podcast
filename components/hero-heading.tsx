@@ -1,4 +1,4 @@
-import { lora } from "@/app/layout";
+import { lora } from "@/constant/constants";
 
 type HeroHeadingProps = {
   text: string;

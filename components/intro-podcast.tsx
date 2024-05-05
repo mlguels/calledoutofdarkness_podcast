@@ -1,5 +1,5 @@
-import { lora } from "@/app/layout";
 import { Pinyon_Script } from "next/font/google";
+import { lora } from "@/constant/constants";
 
 const pinyonScript = Pinyon_Script({
   subsets: ["latin"],

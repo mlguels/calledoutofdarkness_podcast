@@ -1,7 +1,8 @@
 import Image from "next/image";
-import IntroPodcast from "./intro-podcast";
 import Link from "next/link";
-import { lora } from "@/app/layout";
+
+import IntroPodcast from "./intro-podcast";
+import { lora } from "@/constant/constants";
 
 export default function PodcastDesc() {
   return (

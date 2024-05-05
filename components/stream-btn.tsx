@@ -1,5 +1,6 @@
-import { lora } from "@/app/layout";
 import Link from "next/link";
+
+import { lora } from "@/constant/constants";
 
 export default function StreamButton() {
   return (

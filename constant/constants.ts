@@ -1,3 +1,5 @@
+import { Lora } from "next/font/google";
+
 export const guests = [
   {
     id: 1,
@@ -55,3 +57,5 @@ export const socialLinks = [
     icon: "/images/spotify.png",
   },
 ];
+
+export const lora = Lora({ subsets: ["latin"] });
