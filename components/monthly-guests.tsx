@@ -1,5 +1,4 @@
-import { lora } from "@/app/layout";
-
+import { lora } from "@/constant/constants";
 import GuestCardList from "./guest-card-list";
 
 export default function MonthlyGuests() {

@@ -1,6 +1,7 @@
-import { lora } from "@/app/layout";
-import { Guest } from "@/types/types";
 import Image from "next/image";
+
+import { Guest } from "@/types/types";
+import { lora } from "@/constant/constants";
 
 type GuestCardProps = {
   guest: Guest;

@@ -5,7 +5,7 @@ import { Toaster } from "react-hot-toast";
 
 import "./globals.css";
 
-export const inter = Inter({ subsets: ["latin"] });
+const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Called out of Darkness",
