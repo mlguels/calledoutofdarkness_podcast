@@ -13,14 +13,14 @@ const pinyonScript = Pinyon_Script({
 
 export default function HeroSection() {
   return (
-    <main className="flex flex-col md:flex-row justify-center gap-y-10 md:gap-[300px] items-center pt-10 pb-20 bg-pink-primary">
+    <main className="flex flex-col md:flex-row justify-center gap-y-10 md:gap-[300px] items-center pt-10 pb-20 bg-white">
       <section className="flex flex-col">
         <HeroHeading text="Called" />
         <HeroHeading text="Out of" />
         <HeroHeading text="Darkness" />
         <div className="flex flex-col">
           <h2
-            className={`${lora.className} text-5xl md:text-7xl  text-cream self-end`}
+            className={`${lora.className} text-5xl md:text-7xl text-pink-primary self-end`}
           >
             Summer
           </h2>
@@ -30,7 +30,7 @@ export default function HeroSection() {
           >
             with
             <span
-              className={`${lora.className} text-5xl md:text-7xl text-cream self-end`}
+              className={`${lora.className} text-5xl md:text-7xl text-pink-primary self-end`}
             >
               {" "}
               Sollis
@@ -41,16 +41,14 @@ export default function HeroSection() {
           </div>
         </div>
       </section>
-      <div>
-        <Image
-          src="/images/summer.png"
-          alt="Picture of the author"
-          width={300}
-          height={300}
-          className="rounded-2xl min-w-[300px] min-h-[300px] md:w-[500px] md:h-[500px]"
-          quality={100}
-        />
-      </div>
+      <Image
+        src="/images/summer.png"
+        alt="Picture of the author"
+        width={300}
+        height={300}
+        className="rounded-2xl w-auto h-auto md:w-[500px] md:h-[500px]"
+        quality={100}
+      />
     </main>
   );
 }

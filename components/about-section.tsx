@@ -6,9 +6,7 @@ export default function AboutMe() {
     <main className="bg-pink-primary pt-10 pb-10 flex justify-center">
       <section className="flex flex-col md:flex-row justify-center items-center gap-10">
         <div className="flex flex-col items-center gap-8">
-          <h1 className="text-white border-2 border-dotted border-black w-fit px-3 py-4">
-            About Me
-          </h1>
+          <h1 className="text-white w-fit px-3 py-4 text-2xl">About Me</h1>
           <p
             className={`${lora.className} max-w-[600px] text-brown-primary text-2xl w-auto p-5`}
           >

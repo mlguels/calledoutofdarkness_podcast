@@ -11,7 +11,6 @@ export default function Home() {
       <PodcastDesc />
       <AboutMe />
       <ContactPage />
-      <Footer />
     </main>
   );
 }
