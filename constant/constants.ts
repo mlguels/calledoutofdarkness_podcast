@@ -45,13 +45,9 @@ export const socialLinks = [
     icon: "/images/youtube.png",
   },
   {
-    link: "https://www.tiktok.com/@summersollis?is_from_webapp=1&sender_device=pc",
-    icon: "/images/tiktok.png",
+    link: "https://podcasts.apple.com/us/podcast/called-out-of-darkness/id1748901451",
+    icon: "/images/podcast.png",
   },
-  // {
-  //   link: "https://www.email.com/",
-  //   icon: "/images/email.png",
-  // },
   {
     link: "https://podcasters.spotify.com/pod/show/calledoutofdarkness",
     icon: "/images/spotify.png",
