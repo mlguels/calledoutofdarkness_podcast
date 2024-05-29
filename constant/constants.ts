@@ -55,3 +55,10 @@ export const socialLinks = [
 ];
 
 export const lora = Lora({ subsets: ["latin"] });
+
+export const navItems = [
+  { name: "Home", link: "#home" },
+  { name: "Latest Episode", link: "#episode1" },
+  { name: "About Me", link: "#aboutme" },
+  { name: "Prayer Request", link: "#request" },
+];
