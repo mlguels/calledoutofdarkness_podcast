@@ -6,7 +6,7 @@ import { lora } from "@/constant/constants";
 
 export default function PodcastDesc() {
   return (
-    <main className="bg-cream h-fit pt-10 pb-10">
+    <main id="episode1" className="bg-cream h-fit pt-10 pb-10">
       <section className="flex flex-col md:flex-row justify-center items-center gap-10 p-10">
         <Image
           src="/images/lightbulb.JPG"

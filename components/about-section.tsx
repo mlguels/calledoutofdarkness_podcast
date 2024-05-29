@@ -3,39 +3,41 @@ import { lora } from "@/constant/constants";
 
 export default function AboutMe() {
   return (
-    <main className="bg-pink-primary pt-10 pb-10 flex justify-center">
+    <main
+      id="aboutme"
+      className="bg-pink-primary pt-10 pb-10 flex justify-center"
+    >
       <section className="flex flex-col md:flex-row justify-center items-center gap-10">
         <div className="flex flex-col items-center gap-8">
-          <h1 className="text-white w-fit px-3 py-4 text-2xl">About Me</h1>
+          <h1 className="text-white w-fit px-3 py-4 text-4xl">About Me</h1>
           <p
-            className={`${lora.className} max-w-[600px] text-brown-primary text-2xl w-auto p-5`}
+            className={`${lora.className} max-w-[700px] text-brown-primary text-2xl w-auto p-5`}
           >
-            Hi, my name is Summer. I grew up in a non-Christian home and really
+            Hi, my name is Summer. I grew up in a non-religious home and really
             struggled in darkness. I struggled with depression, sin and anger. I
-            was broken until I came into the light of Jesus four years ago. Not
-            only was I living in this darkness of depression, but I was also
-            living in sin. This was because I didn’t know about the love of
-            Jesus, I didn’t know anything about God until four years ago. Until
-            I let God’s light in. Now I am a pentecostal, apostolic woman living
-            for God. So, why did I start this podcast? I felt led by God to
-            bring people out of the darkness from out of the unknown, from out
-            of depression, from out of the wickedness of this world and into His
-            light. As the Lord called me out of darkness, he will call all of
-            his children out of darkness!
+            felt broken and empty, until the light of Jesus came into my life
+            four years ago. This was because I didn’t know about the love of
+            Jesus, or anything about God. Now I am a pentecostal, apostolic
+            woman living for God. So, why did I start this podcast? I felt led
+            by God to bring people out of the darkness, from out of the unknown.
+            To bring people out of depression, from out of the wickedness of
+            this world and into His marvelous light. Did you know the first
+            thing God commanded was, “let there be light” (found in Genesis
+            1:3). As the Lord called me out of darkness, He calls all of his
+            children out of darkness!
           </p>
         </div>
 
         <div className="flex">
           <Image
-            src="/images/summer2.png"
+            src="/images/summeraboutme.jpeg"
             width={500}
             height={500}
             alt="Picture of the author"
-            className="rounded-2xl"
+            className="rounded-full shadow-2xl"
           />
         </div>
       </section>
-      {/* <div className="bg-pink-quatro w-10 h-auto rounded-2xl" /> */}
     </main>
   );
 }
