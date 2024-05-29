@@ -3,8 +3,11 @@ import Image from "next/image";
 import { Pinyon_Script } from "next/font/google";
 
 import StreamButton from "./stream-btn";
-import HeroHeading from "./hero-heading";
+
 import { lora } from "@/constant/constants";
+import { TextGenerateEffect } from "./ui/text-generate-effect";
+
+import { SpotlightPreview } from "./ui/spotlight-preview";
 
 const pinyonScript = Pinyon_Script({
   subsets: ["latin"],
@@ -13,11 +16,15 @@ const pinyonScript = Pinyon_Script({
 
 export default function HeroSection() {
   return (
-    <main className="flex flex-col md:flex-row justify-center gap-y-10 md:gap-[300px] items-center pt-10 pb-20 bg-white">
+    <main
+      id="home"
+      className="flex flex-col md:flex-row justify-center gap-y-10 md:gap-[300px] items-center pt-10 pb-20 bg-[#f3e5e0]"
+    >
+      <SpotlightPreview />
       <section className="flex flex-col">
-        <HeroHeading text="Called" />
-        <HeroHeading text="Out of" />
-        <HeroHeading text="Darkness" />
+        <TextGenerateEffect words="Called" />
+        <TextGenerateEffect words="Out of" />
+        <TextGenerateEffect words="Darkness" />
         <div className="flex flex-col">
           <h2
             className={`${lora.className} text-5xl md:text-7xl text-pink-primary self-end`}
@@ -26,11 +33,11 @@ export default function HeroSection() {
           </h2>
 
           <p
-            className={`${pinyonScript.className} text-5xl md:text-7xl text-brown-secondary flex justify-between`}
+            className={`${pinyonScript.className} text-5xl md:text-7xl text-brown-primary flex justify-between`}
           >
             with
             <span
-              className={`${lora.className} text-5xl md:text-7xl text-pink-primary self-end`}
+              className={`${lora.className} text-5xl md:text-7xl text-pink-primary  self-end`}
             >
               {" "}
               Sollis
@@ -46,7 +53,7 @@ export default function HeroSection() {
         alt="Picture of the author"
         width={300}
         height={300}
-        className="rounded-2xl w-auto h-auto md:w-[500px] md:h-[500px]"
+        className="rounded-3xl w-auto h-auto md:w-[500px] md:h-[500px] shadow-md"
         quality={100}
       />
     </main>
