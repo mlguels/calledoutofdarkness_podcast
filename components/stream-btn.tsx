@@ -5,7 +5,7 @@ import { lora } from "@/constant/constants";
 export default function StreamButton() {
   return (
     <Link
-      href="https://podcasters.spotify.com/pod/show/calledoutofdarkness"
+      href="https://open.spotify.com/episode/1tzYIBEQFPaoGn6131YxXx?si=15kVzR7YSKmK0z_88jNgrw"
       target="_blank"
     >
       <button
