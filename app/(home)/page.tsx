@@ -6,7 +6,7 @@ import PodcastDesc from "@/components/podcast-desc";
 
 export default function Home() {
   return (
-    <main>
+    <main className="overflow-x-hidden mx-auto">
       <HeroSection />
       <PodcastDesc />
       <AboutMe />
