@@ -53,7 +53,7 @@ export default function HeroSection() {
         alt="Picture of the author"
         width={300}
         height={300}
-        className="rounded-3xl w-auto h-auto md:w-[500px] md:h-[500px] shadow-md"
+        className="rounded-3xl w-200 h-200 md:w-[500px] md:h-[500px] shadow-md"
         quality={100}
       />
     </main>
