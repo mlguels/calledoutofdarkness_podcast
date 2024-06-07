@@ -5,3 +5,9 @@
 .state-effect {
   @apply focus:scale-105 hover:scale-105 active:scale-[1.02] transition;
 }
+
+@layer base {
+  * {
+    @apply !scroll-smooth;
+  }
+}
