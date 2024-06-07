@@ -10,8 +10,8 @@ export default function Home() {
       <HeroSection />
       <PodcastDesc />
       <AboutMe />
-      <ContactPage />
       <BibleVerses />
+      <ContactPage />
     </main>
   );
 }
