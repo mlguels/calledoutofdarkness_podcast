@@ -5,13 +5,13 @@ export default function AboutMe() {
   return (
     <main
       id="aboutme"
-      className="bg-pink-primary pt-10 pb-10 flex justify-center"
+      className="bg-pink-primary pt-10 pb-10 flex justify-center p-2"
     >
       <section className="flex flex-col md:flex-row justify-center items-center gap-10">
         <div className="flex flex-col items-center gap-8">
           <h1 className="text-white w-fit px-3 py-4 text-4xl">About Me</h1>
           <p
-            className={`${lora.className} max-w-[700px] text-brown-primary text-2xl w-auto p-5`}
+            className={`${lora.className} max-w-[700px] text-brown-primary text-lg md:text-2xl w-auto p-5`}
           >
             Hi, my name is Summer. I grew up in a non-religious home and really
             struggled in darkness. I struggled with depression, sin and anger. I
