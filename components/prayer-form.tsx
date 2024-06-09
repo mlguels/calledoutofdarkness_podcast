@@ -22,7 +22,6 @@ export default function PrayerForm() {
       let errorMessage = "";
 
       result.error.issues.forEach((issue) => {
-        console.log(issue);
         errorMessage =
           errorMessage + issue.path[0] + ": " + issue.message + ". ";
       });
