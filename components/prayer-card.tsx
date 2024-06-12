@@ -1,6 +1,7 @@
 import React from "react";
 
 import { PrayerRequest } from "@prisma/client";
+import PrayerDeleteButton from "./prayer-delete-btn";
 
 export default function PrayerCard({ prayer }: { prayer: PrayerRequest }) {
   return (
@@ -20,6 +21,8 @@ export default function PrayerCard({ prayer }: { prayer: PrayerRequest }) {
           }
         )}{" "}
       </p>
+
+      <PrayerDeleteButton prayerID={prayer.id} />
     </section>
   );
 }

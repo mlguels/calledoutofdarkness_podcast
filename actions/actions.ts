@@ -25,3 +25,17 @@ export const addPrayerRequest = async (newPrayerRequest: unknown) => {
 
   revalidatePath("/admin/prayers");
 };
+
+export const deletePrayerRequest = async (id: number) => {
+  try {
+    await prisma.prayerRequest.delete({
+      where: { id },
+    });
+  } catch (error) {
+    return {
+      error: "Prayer cannot be deleted",
+    };
+  }
+
+  revalidatePath("/admin/prayers");
+};
