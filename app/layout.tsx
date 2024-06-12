@@ -7,6 +7,7 @@ import "./globals.css";
 
 import { FloatingNav } from "@/components/navbar";
 import { navItems } from "@/constant/constants";
+import { Analytics } from "@vercel/analytics/react";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -23,6 +24,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${inter.className}`}>
+        <Analytics />
         <FloatingNav navItems={navItems} />
         {children}
         <Toaster position="top-right" />
