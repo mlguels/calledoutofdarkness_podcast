@@ -24,9 +24,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${inter.className}`}>
-        <Analytics />
         <FloatingNav navItems={navItems} />
         {children}
+        <Analytics />
         <Toaster position="top-right" />
       </body>
     </html>
