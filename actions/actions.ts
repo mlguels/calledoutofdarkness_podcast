@@ -23,5 +23,5 @@ export const addPrayerRequest = async (newPrayerRequest: unknown) => {
     data: result.data,
   });
 
-  revalidatePath("/prayers");
+  revalidatePath("/admin/prayers");
 };
