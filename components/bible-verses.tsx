@@ -8,7 +8,7 @@ import { bibleVerses } from "@/constant/constants";
 
 export function BibleVerses() {
   return (
-    <div className="h-[40rem] rounded-md flex flex-col antialiased bg-cream items-center justify-center relative overflow-hidden">
+    <div className="pt-10 pb-20 rounded-md flex flex-col antialiased bg-cream items-center justify-center relative overflow-hidden">
       <div className="flex flex-col gap-3 items-center bg-cream">
         <Image
           src="/images/bibleimage.png"

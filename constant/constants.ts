@@ -79,6 +79,26 @@ export const bibleVerses = [
       "“Come to me, all you who are weary and burdened, and I will give you rest. Take my yoke upon you and learn from me, for I am gentle and humble in heart, and you will find rest for your souls. For my yoke is easy and my burden is light.”",
     name: "Mathew 11:28-30",
   },
+  {
+    quote:
+      '"And all things, whatsoever ye shall ask in prayer, believing, ye shall receive"',
+    name: "Matthew 21:22",
+  },
+  {
+    quote:
+      '"Ask, and it shall be given you; seek, and ye shall find; knock, and it shall be opened unto you"',
+    name: "Matthew 7:7",
+  },
+  {
+    quote:
+      '"Therefore whosoever heareth these sayings of mine, and doeth them, I will liken him unto a wise man, which built his house upon a rock: And the rain descended, and the floods came, and the winds blew, and beat upon that house; and it fell not: for it was founded upon a rock. And every one that heareth these sayings of mine, and doeth them not, shall be likened unto a foolish man, which built his house upon the sand: And the rain descended, and the floods came, and the winds blew, and beat upon that house; and it fell: and great was the fall of it"',
+    name: "Matthew 7:24-27",
+  },
+  {
+    quote:
+      '"For thou art my rock and my fortress; therefore for thy names sake lead me, and guide me"',
+    name: "Psalms 31:3",
+  },
 ];
 
-("Matthew 21:22, 7:7, 7:24-27, ps.31:3,John 1:1-5, 1:14, 8:12,8:44, 3:5-7, 3:19-21,Ephesians 5:3-5, 5:14, Romans 12:2, 13:12-13, Colossians 3:8-10, Galatians 5:19-21, Philippians 2:15-16, Isaiah 58:6");
+("John 1:1-5, 1:14, 8:12,8:44, 3:5-7, 3:19-21,Ephesians 5:3-5, 5:14, Romans 12:2, 13:12-13, Colossians 3:8-10, Galatians 5:19-21, Philippians 2:15-16, Isaiah 58:6");
