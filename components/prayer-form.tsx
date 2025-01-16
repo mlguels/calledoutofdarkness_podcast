@@ -1,32 +1,28 @@
-"use client";
+'use client';
 
-import toast from "react-hot-toast";
+import toast from 'react-hot-toast';
 
-import { addPrayerRequest } from "@/actions/actions";
-import PrayerSubmitButton from "./prayer-submit-btn";
-import { PrayerSchema } from "@/lib/zod-types";
-import { useRef } from "react";
+import { addPrayerRequest } from '@/actions/actions';
+import PrayerSubmitButton from './prayer-submit-btn';
+import { PrayerSchema } from '@/lib/zod-types';
+import { useRef } from 'react';
 
 export default function PrayerForm() {
   const ref = useRef<HTMLFormElement>(null);
   const clientAction = async (formData: FormData) => {
     const newPrayerRequest = {
-      name: formData.get("name")?.toString() ?? "",
-      email: formData.get("email")?.toString() ?? "",
-      prayer: formData.get("prayer")?.toString() ?? "",
+      name: formData.get('name')?.toString().trim() ?? '',
+      email: formData.get('email')?.toString().trim() ?? '',
+      prayer: formData.get('prayer')?.toString().trim() ?? '',
     };
 
     // client site validation
     const result = PrayerSchema.safeParse(newPrayerRequest);
     if (!result.success) {
-      let errorMessage = "";
-
-      result.error.issues.forEach((issue) => {
-        errorMessage =
-          errorMessage + issue.path[0] + ": " + issue.message + ". ";
-      });
-
-      toast.error(errorMessage);
+      const errorMessages = result.error.issues.map(
+        (issue) => `${issue.path[0]}: ${issue.message}`
+      );
+      toast.error(errorMessages.join('. '));
       return;
     }
 
@@ -37,7 +33,7 @@ export default function PrayerForm() {
     }
 
     ref.current?.reset();
-    toast.success("Prayer request submitted!");
+    toast.success('Prayer request submitted!');
   };
 
   return (
