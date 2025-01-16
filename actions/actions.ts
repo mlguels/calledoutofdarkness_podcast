@@ -1,29 +1,30 @@
-"use server";
+'use server';
 
-import { revalidatePath } from "next/cache";
+import { revalidatePath } from 'next/cache';
 
-import prisma from "@/lib/db";
-import { PrayerSchema } from "@/lib/zod-types";
+import prisma from '@/lib/db';
+import { PrayerSchema } from '@/lib/zod-types';
 
-export const addPrayerRequest = async (newPrayerRequest: unknown) => {
-  const result = PrayerSchema.safeParse(newPrayerRequest);
-  if (!result.success) {
-    let errorMessage = "";
+export const addPrayerRequest = async (
+  newPrayerRequest: unknown
+): Promise<{ success?: true; error?: string }> => {
+  const { success, data, error } = PrayerSchema.safeParse(newPrayerRequest);
 
-    result.error.issues.forEach((issue) => {
-      errorMessage = errorMessage + issue.path[0] + ": " + issue.message + ". ";
-    });
+  if (!success) {
+    const errorMessage = error.issues
+      .map((issue) => `${issue.path[0]}: ${issue.message}`)
+      .join('. ');
 
-    return {
-      error: errorMessage,
-    };
+    return { error: errorMessage };
   }
 
-  await prisma.prayerRequest.create({
-    data: result.data,
-  });
-
-  revalidatePath("/admin/prayers");
+  try {
+    await prisma.prayerRequest.create({ data });
+    revalidatePath('/admin/prayers');
+    return { success: true };
+  } catch (dbError) {
+    return { error: 'Failed to save the prayer request. Please try again.' };
+  }
 };
 
 export const deletePrayerRequest = async (id: number) => {
@@ -33,9 +34,9 @@ export const deletePrayerRequest = async (id: number) => {
     });
   } catch (error) {
     return {
-      error: "Prayer cannot be deleted",
+      error: 'Prayer cannot be deleted',
     };
   }
 
-  revalidatePath("/admin/prayers");
+  revalidatePath('/admin/prayers');
 };
