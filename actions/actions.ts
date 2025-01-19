@@ -8,18 +8,19 @@ import { PrayerSchema } from '@/lib/zod-types';
 export const addPrayerRequest = async (
   newPrayerRequest: unknown
 ): Promise<{ success?: true; error?: string }> => {
-  const { success, data, error } = PrayerSchema.safeParse(newPrayerRequest);
+  const result = PrayerSchema.safeParse(newPrayerRequest);
 
-  if (!success) {
-    const errorMessage = error.issues
+  if (!result.success) {
+    const errorMessage = result.error.issues
       .map((issue) => `${issue.path[0]}: ${issue.message}`)
       .join('. ');
-
     return { error: errorMessage };
   }
 
+  const validData = result.data;
+
   try {
-    await prisma.prayerRequest.create({ data });
+    await prisma.prayerRequest.create({ data: validData });
     revalidatePath('/admin/prayers');
     return { success: true };
   } catch (dbError) {
@@ -27,16 +28,23 @@ export const addPrayerRequest = async (
   }
 };
 
-export const deletePrayerRequest = async (id: number) => {
+export const deletePrayerRequest = async (
+  id: number
+): Promise<{ success?: true; error?: string }> => {
   try {
     await prisma.prayerRequest.delete({
       where: { id },
     });
-  } catch (error) {
-    return {
-      error: 'Prayer cannot be deleted',
-    };
-  }
 
-  revalidatePath('/admin/prayers');
+    try {
+      await revalidatePath('/admin/prayers');
+    } catch (revalidationError) {
+      console.error('Revalidation failed:', revalidationError);
+    }
+
+    return { success: true };
+  } catch (error) {
+    console.error('Error deleting prayer request:', error);
+    return { error: 'Prayer request could not be deleted. Please try again.' };
+  }
 };
